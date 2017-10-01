@@ -1,8 +1,7 @@
-'''
-Adjacency matrix graph representation
+/*
+ * Adjacency matrix graph representation
+ */
 
-
-'''
 
 #include <stdio.h>
 #include <stdlib.h>
