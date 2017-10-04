@@ -1,1 +1,5 @@
-g++ peak.cpp -o peak --std=c++11
+peak:
+	g++ peak.cpp -o ../bin/peak --std=c++1z
+
+sieve:
+	g++ erathosenes.cpp -o ../bin/erathosenes --std=c++1z

@@ -6,11 +6,11 @@ using namespace std;
 int peakfind(vector<int> haystack)
 {
     int result = 0;
-    for (int i = 0; i < haystack.size(); i++)
+    for (auto x:haystack)
     {
-        if (haystack[i] > result)
+        if (x > result)
         {
-            result = haystack[i];
+            result = x;
         }
     }
     return result;
