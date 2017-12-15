@@ -80,5 +80,6 @@ int main()
     cout << "nLCA(4, 6) = " << findLCA(root, 4, 6);
     cout << "nLCA(3, 4) = " << findLCA(root, 3, 4);
     cout << "nLCA(2, 4) = " << findLCA(root, 2, 4);
+    cout << endl;
     return 0;
 }
