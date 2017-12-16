@@ -17,7 +17,7 @@ void swap(int* a, int *b)
     *b = t;
 }
 
-struct ndoe *newNode(int data)
+struct node *newNode(int data)
 {
     struct node* node = (struct node *)malloc(sizeof(struct node));
     node->data = data;
@@ -33,15 +33,15 @@ struct ndoe *newNode(int data)
  * nod. Else the first and last contain the resultant nodes.
  */
 
-void correctBSUtil(struct node* root,
+void correctBSTUtil(struct node* root,
                    struct node** first,
                    struct node** middle, 
-                   struct node** alst,
+                   struct node** last,
                    struct node** prev)
 {
     if (root)
     {
-        correctBSTUtil(root->lefft, first, middle, last, prev);
+        correctBSTUtil(root->left, first, middle, last, prev);
 
         if (*prev && root->data < (*prev)->data)
         {
@@ -115,13 +115,17 @@ int main()
     root->right->right  = newNode(12);
     root->right->left   = newNode(7);
 
-    std::cout << "Inorder traversal of the original tree is " << std::endl;
+    std::cout << "Inorder traversal of the original tree is " ;
     printInorder(root);
+
+    std::cout << std::endl;
 
     correctBST(root);
 
-    std::cout << "Now inorder traversal of the fixed tree is " <<std::endl;
+    std::cout << "Now inorder traversal of the fixed tree is ";
     printInorder(root);
+    
+    std::cout << std::endl;
 
     return 0;
 }
